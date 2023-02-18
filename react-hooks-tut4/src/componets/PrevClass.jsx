@@ -1,0 +1,28 @@
+import React, { Component } from "react";
+
+class PrevClass extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      count: 0,
+    };
+  }
+
+  incrementCount = () => {
+    this.setState(prevState => {
+        return {
+            count : prevState.count + 1
+        }
+    });
+  };
+  render() {
+    return (
+      <div>
+        <button onClick={this.incrementCount}>PrevClass Count:{this.state.count}</button>
+      </div>
+    );
+  }
+}
+
+export default PrevClass;
